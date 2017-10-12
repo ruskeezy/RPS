@@ -5,9 +5,8 @@ var computerChoice = Math.floor(Math.random() *3);
 var choiceP = document.getElementById("choice");
 
 
-function showChoice(choise) {
-    paragraph.innerText = "You chose " + playerChoice + " !"
-    paragraph.innerText = "Computer chose " + computerChoice + " !"
+function showChoice() {
+    choiceP.innerText = "You chose " + playerChoice + ", the computer chose" + computerChoice + "."
 }
 function playerWins() {
     paragraph.innerText = "You won!"
@@ -24,7 +23,8 @@ function tie() {
 function playRPS() {
 
 
-    var computerChoice = Math.floor(Math.random() *3);
+    computerChoice = Math.floor(Math.random() *3);
+    showChoice()
 
     var choices = {
         '0': 'Rock',
